@@ -1,7 +1,10 @@
 name: Test deployment workflow
 
-on: [push]
-  
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,9 +12,3 @@ jobs:
     steps:
       - name: Test echo
         run: echo "Hola Mundo - Build"
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Test echo
-        run: echo "Hola Mundo - Test"
